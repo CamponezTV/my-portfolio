@@ -19,7 +19,7 @@ export const navItems = [
     {
       id: 2,
       title: "Diversidade de línguas",
-      description: "Inglês, Português e Espanhol",
+      description: "Português, Inglês e Espanhol",
       className: "lg:col-span-2 md:col-span-3 md:row-span-2",
       imgClassName: "",
       titleClassName: "justify-start",
@@ -80,19 +80,19 @@ export const navItems = [
     },
     {
       id: 2,
-      title: "Clone do Discord (Campfy)",
-      des: "Um Clone do discord feito com a minha cara e criatividade",
-      img: "",
-      iconLists: ["/next.svg", "/three.svg", "/ts.svg", "/tail.svg", "/c.svg"],
-      link: "",
+      title: "ItoBooks",
+      des: "Uma livraria online em tributo a os mangás de terro de Junji Ito",
+      img: "p2.png",
+      iconLists: ["/js.png", "/html.png", "/css.png"],
+      link: "https://github.com/CamponezTV/ItoBooks",
     },
     {
       id: 3,
       title: "Portfólio Arthur Camponez",
       des: "Um Portfólio feito para me destacar dentro do mercado super concorrido de TI.",
       img: "/p3.png",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg", "/c.svg"],
-      link: "",
+      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg"],
+      link: "https://github.com/CamponezTV/my-portfolio",
     },
     {
       id: 4,
@@ -107,33 +107,9 @@ export const navItems = [
   export const testimonials = [
     {
       quote:
-        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-      name: "Michael Johnson",
-      title: "Director of AlphaStream Technologies",
-    },
-    {
-      quote:
-        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-      name: "Michael Johnson",
-      title: "Director of AlphaStream Technologies",
-    },
-    {
-      quote:
-        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-      name: "Michael Johnson",
-      title: "Director of AlphaStream Technologies",
-    },
-    {
-      quote:
-        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-      name: "Michael Johnson",
-      title: "Director of AlphaStream Technologies",
-    },
-    {
-      quote:
-        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-      name: "Michael Johnson",
-      title: "Director of AlphaStream Technologies",
+        "Atuo como supervisor do Arthur na Banestes DTVM, desde o primeiro dia Arthur tem se mostrado uma pessoa curiosa e disposta a aprender, destaco que ele tem cumprido suas tarefas dentro dos prazos estipulados. Importante enfatizar que suas habilidades superam em relação ao profissional padrão de TI.",
+      name: "Igor Ofrante Dutra",
+      title: "Analista de TI na Banestes DTVM",
     },
   ];
   

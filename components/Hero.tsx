@@ -25,7 +25,7 @@ const Hero = () => {
 
                 <TextGenerateEffect 
                     className="text-center text-[40px] md:text-5xl lg:text-6xl"
-                    words=" Olá, sou o Arthur! Sou um desenvolvedor FrontEnd Design nascido no Brasil"
+                    words=" Olá, sou o Arthur! Sou um desenvolvedor UX/UI Front End"
                 />
 
                 <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>

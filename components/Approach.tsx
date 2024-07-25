@@ -15,7 +15,7 @@ const Approach = () => {
         <Card 
         title="Espírito aventureiro e desafiador" 
         icon={<AceternityIcon order="Fato 1" />}
-        description="Não tenho nenhum problema com me aventurar por lugares novos seja: um novo emprego, um novo país, uma nova casa; sempre me adaptei muito bem por todos os lugares que ja passei e levo o conhecimento e as boas lembranças comigo. Amo me desafiar e passar por obstaculós, assim me torno cada veez melhor e mais forte."
+        description="Não tenho nenhum problema com me aventurar por lugares novos seja: um novo emprego, um novo país, uma nova casa; sempre me adaptei muito bem por todos os lugares que ja passei e levo o conhecimento e as boas lembranças comigo. Amo me desafiar e passar por obstaculós, assim me torno cada vez melhor e mais forte."
         >
         <CanvasRevealEffect
          animationSpeed={5.1}
@@ -24,7 +24,7 @@ const Approach = () => {
         </Card>
         <Card title="Viciado em aprender e melhorar" 
         icon={<AceternityIcon order="Fato 2" />}
-        description="Eu já estudo TI a um bom tempo, porém não tenho muita experiência na prática, devo programar ativamente a 1 ano e meio e o motivo disso é meu extensivo tempo estudando a parte teórica, UX/UI e meu tempo fora que morei nos Estados Unidos. Tenho muita sede de aprender e amo a sensação de estar aprendendo."
+        description="Eu já estudo TI a um bom tempo, porém não tenho muita experiência na prática, devo programar ativamente a 1 ano e meio, e o motivo disso é meu extensivo tempo estudando a parte teórica de UX/UI e meu tempo fora que morei nos Estados Unidos. Tenho muita sede de aprender e amo a sensação de estar melhorando como profissional."
         >
         <CanvasRevealEffect
          animationSpeed={3}
