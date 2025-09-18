@@ -86,9 +86,8 @@ export const BentoGridItem = ({
       className={cn(
         // remove p-4 rounded-3xl dark:bg-black dark:border-white/[0.2] bg-white  border border-transparent, add border border-white/[0.1] overflow-hidden relative
         "row-span-1 relative overflow-hidden rounded-3xl border dark:border-white/[0.1] light:border-blue-200/50 group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
-        // Theme-aware background gradients with better visibility
         "dark:bg-gradient-to-br dark:from-slate-900/95 dark:to-slate-800/95 dark:via-slate-800/95",
-        "light:bg-gradient-to-br light:from-blue-50/95 light:to-indigo-100/95 light:via-purple-50/95 light:shadow-lg light:shadow-blue-200/50",
+        "bg-gradient-to-br from-blue-50/95 to-indigo-100/95 via-purple-50/95 shadow-lg shadow-blue-200/50",
         className
       )}
     >
