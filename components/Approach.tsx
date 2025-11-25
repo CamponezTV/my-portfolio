@@ -4,27 +4,32 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "@/components/ui/CanvasRevealEffect";
 import { div } from "three/examples/jsm/nodes/Nodes.js";
+import { useLanguage } from '@/app/language-provider';
+import { translations } from '@/locales/translations';
 
 const Approach = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <section className="w-full py-20">
         <h1 className="heading">
-            Minhas principais <span className="text-green-500">características</span>
+            {t.approach.title} <span className="text-green-500">{t.approach.titleHighlight}</span> {t.approach.titleEnd}
         </h1>
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center gap-4">
         <Card 
-        title="Espírito aventureiro e desafiador" 
-        icon={<AceternityIcon order="Fato 1" />}
-        description="Não tenho nenhum problema com me aventurar por lugares novos seja: um novo emprego, um novo país, uma nova casa; sempre me adaptei muito bem por todos os lugares que ja passei e levo o conhecimento e as boas lembranças comigo. Amo me desafiar e passar por obstaculós, assim me torno cada vez melhor e mais forte."
+        title={t.approach.items[0].title}
+        icon={<AceternityIcon order={t.approach.items[0].order} />}
+        description={t.approach.items[0].description}
         >
         <CanvasRevealEffect
          animationSpeed={5.1}
          containerClassName="bg-emerald-900"
         />
         </Card>
-        <Card title="Viciado em aprender e melhorar" 
-        icon={<AceternityIcon order="Fato 2" />}
-        description="Eu já estudo TI a um bom tempo, porém não tenho muita experiência na prática, devo programar ativamente a 1 ano e meio, e o motivo disso é meu extensivo tempo estudando a parte teórica de UX/UI e meu tempo fora que morei nos Estados Unidos. Tenho muita sede de aprender e amo a sensação de estar melhorando como profissional."
+        <Card title={t.approach.items[1].title}
+        icon={<AceternityIcon order={t.approach.items[1].order} />}
+        description={t.approach.items[1].description}
         >
         <CanvasRevealEffect
          animationSpeed={3}
@@ -37,9 +42,9 @@ const Approach = () => {
         />
         </Card>
         <Card 
-        title="Trabalho Coletivo é meu forte" 
-        icon={<AceternityIcon order="Fato 3" />}
-        description="Tenho muitas boas ideias trabalhando individualmente, porém sempre senti que meu desempenho melhora muito com um bom trabalho em equipe. Os brainstorms, troca de ideias, conversas criativas, ajudam muito na hora de selecionar e realizar decisões acertivas e precisas para tomar um bom rumo de seus proejetos."
+        title={t.approach.items[2].title}
+        icon={<AceternityIcon order={t.approach.items[2].order} />}
+        description={t.approach.items[2].description}
         >
         <CanvasRevealEffect
          animationSpeed={3}

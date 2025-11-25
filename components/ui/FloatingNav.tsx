@@ -9,6 +9,7 @@ import {
 import { cn } from "@/utils/cn";
 import Link from "next/link";
 import { ThemeToggle } from "./ThemeToggle";
+import { LanguageToggle } from "./LanguageToggle";
 
 export const FloatingNav = ({
   navItems,
@@ -73,6 +74,7 @@ export const FloatingNav = ({
             <span className="text-sm !cursor-pointer">{navItem.name}</span>
           </Link>
         ))}
+        <LanguageToggle />
         <ThemeToggle />
       </motion.div>
     </AnimatePresence>

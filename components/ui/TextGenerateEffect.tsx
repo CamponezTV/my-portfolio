@@ -13,6 +13,17 @@ export const TextGenerateEffect = ({
   const [scope, animate] = useAnimate();
   let wordsArray = words.split(" ");
   useEffect(() => {
+    // Reset opacity to 0 first, then animate to 1
+    animate(
+      "span",
+      {
+        opacity: 0,
+      },
+      {
+        duration: 0,
+      }
+    );
+    
     animate(
       "span",
       {
@@ -23,7 +34,7 @@ export const TextGenerateEffect = ({
         delay: stagger(0.2),
       }
     );
-  }, [scope.current]);
+  }, [words, animate]);
 
   const renderWords = () => {
     return (

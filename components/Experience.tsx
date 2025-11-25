@@ -1,16 +1,24 @@
+"use client";
+
 import { workExperience } from '@/data'
 import React from 'react'
 import { Button } from './ui/Moving.Borders'
+import { useLanguage } from '@/app/language-provider';
+import { translations } from '@/locales/translations';
 
 const Experience = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <div className='py-20 ' id='testimonials'>
         <h1 className='heading'>
-            Minha {' '}
-            <span className='text-green-500'>experiência de trabalho</span>
+            {t.experience.title} {' '}
+            <span className='text-green-500'>{t.experience.titleHighlight}</span>
+            {t.experience.titleEnd && ` ${t.experience.titleEnd}`}
         </h1>
         <div className='w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10'>
-          {workExperience.map((card) => (
+          {workExperience.map((card, index) => (
             <Button 
             key={card.id}
             duration={Math.floor(Math.random() * 10000) + 10000}
@@ -21,10 +29,10 @@ const Experience = () => {
                 <img src={card.thumbnail} alt={card.thumbnail} className='lg:w-32 md:w-20 w-16' />
                 <div className='lg:ms-5'>
                   <h1 className='text-start text-xl md:text-2xl font-bold dark:text-white text-gray-800'>
-                    {card.title}
+                    {t.experience.items[index].title}
                   </h1>
                   <p className='text-start dark:text-white-100 light:text-gray-600 mt-3 font-semibold'>
-                    {card.desc}
+                    {t.experience.items[index].description}
                   </p>
                 </div>             
               </div>

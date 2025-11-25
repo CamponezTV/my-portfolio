@@ -1,19 +1,26 @@
+"use client";
+
 import { projects } from '@/data'
 import React from 'react'
 import { div } from 'three/examples/jsm/nodes/Nodes.js'
 import { PinContainer } from './ui/3d-pin'
 import { FaLocationArrow } from 'react-icons/fa'
+import { useLanguage } from '@/app/language-provider';
+import { translations } from '@/locales/translations';
 
 const RecentProjects = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <div className='py-20 dark:bg-black-100 light:bg-white' id='projects'>
         <h1 className='heading'>
-            Meus {' '}
-            <span className='text-green-500'>projetos </span>
-            mais recentes
+            {t.projects.title} {' '}
+            <span className='text-green-500'>{t.projects.titleHighlight}</span>
+            {t.projects.titleEnd && ` ${t.projects.titleEnd}`}
         </h1>
         <div className='flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10'>
-            {projects.map(({ id, title, des, img, iconLists, link }) => (
+            {projects.map(({ id, img, iconLists, link }, index) => (
                 <div key={id} className='sm:h-[41rem] h-[32rem] h lg:min-h[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw]'>
                     <PinContainer title={link} href={link}>
                         <div className='relative flex items-center justify-center sm:w-[570px] w-[70vw] overflow-hidden sm:h-[40vh] h-[30vh] mb-10'>
@@ -21,15 +28,15 @@ const RecentProjects = () => {
                                 <img src="/bg.png" alt="bg-img" />
                             </div>
                             <img src={img} 
-                            alt={title} 
+                            alt={t.projects.items[index].title} 
                             className='z-10 absolute bottom-0' />
                         </div>
                         <h1 className='font-bold lg:text-2xl md:text-xl text-base line-clamp-1 dark:text-white light:text-gray-800'>
-                            {title}
+                            {t.projects.items[index].title}
                         </h1>
 
                         <p className='lg:text-xl lg:font-normal font-light text-sm line-clamp-2 dark:text-gray-300 light:text-gray-600'>
-                            {des}
+                            {t.projects.items[index].description}
                         </p>
 
                         <div className='flex items-center justify-between mt-7 mb-3'>
@@ -42,7 +49,7 @@ const RecentProjects = () => {
                             </div>
 
                             <div className='flex justify-center items-center'>
-                                <p className='flex lg:text-xl md:text-xs text-sm text-green-500'>Visitar</p>
+                                <p className='flex lg:text-xl md:text-xs text-sm text-green-500'>{t.projects.visit}</p>
                                 <FaLocationArrow className='ms-3 color=#CBACF9'/>
                             </div>
                         </div>

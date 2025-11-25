@@ -1,20 +1,27 @@
+"use client";
+
 import React from 'react'
 import MagicButton from './MagicButton'
 import { FaLocationArrow } from 'react-icons/fa'
 import { div } from 'three/examples/jsm/nodes/Nodes.js'
 import { socialMedia } from '@/data'
+import { useLanguage } from '@/app/language-provider';
+import { translations } from '@/locales/translations';
 
 const Footer = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <footer className='w-full pb-10 mb-[100px] md:mb-5 dark:bg-black-100 light:bg-white' id="contact">
         <div className='flex flex-col items-center'>
             <h1 className='heading lg:max-w-[45vw]'>
-                Pronto para me <span className='text-green-500'>desafiar</span> e incluir no seu time?
+                {t.footer.title} <span className='text-green-500'>{t.footer.titleHighlight}</span> {t.footer.titleEnd}
             </h1>
-            <p className='text-gray-400 dark:text-white-200 light:text-gray-600 md:mt-10 my-5 text-center'>Entre em contato comigo por email para conversarmos melhor.</p>
+            <p className='text-gray-400 dark:text-white-200 light:text-gray-600 md:mt-10 my-5 text-center'>{t.footer.description}</p>
             <a href="mailto:arthurcamponez2020@gmail.com">
                 <MagicButton 
-                 title="Entrar em contato!"
+                 title={t.footer.cta}
                  icon={<FaLocationArrow />}
                  position='right'
                 />
@@ -22,7 +29,7 @@ const Footer = () => {
         </div>
 
         <div className='flex mt-16 md:flex-row flex-col justify-between items-center'>
-            <p className='md:text-base text-sm md:font-normal font-light dark:text-white light:text-gray-600'>Copyright © 2024 Arthur Camponez</p>
+            <p className='md:text-base text-sm md:font-normal font-light dark:text-white light:text-gray-600'>{t.footer.copyright}</p>
 
             <div className='flex items-center md:gap-3 gap-6'>
                 {socialMedia.map((profile) => (

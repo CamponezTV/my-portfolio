@@ -1,14 +1,22 @@
+"use client";
+
 import React from 'react'
 import { InfiniteMovingCards } from './ui/InfiniteMovingCards'
-import { testimonials } from '@/data'
 import { companies } from '@/data'
+import { useLanguage } from '@/app/language-provider';
+import { translations } from '@/locales/translations';
 
 const Clients = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
+  const testimonials = t.testimonials.items;
+
   return (
     <div className='py-20' id='testimonials'>
         <h1 className='heading'>
-            Comentários de pesssoas com quem {' '}
-            <span className='text-green-500'>trabalhei</span>
+            {t.testimonials.title} {' '}
+            <span className='text-green-500'>{t.testimonials.titleHighlight}</span>
         </h1>
         <div className='flex flex-col items-center max-lg:mt-10'>
             <InfiniteMovingCards
